@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Back function</title>
+</head>
+
+<body>
+
+
+</body>
+<script>
+    /*  function myfunction(name){
+         console.log("Good Morning" + name);
+         
+     }
+     function myName(a){
+         let name =  " misbah";
+         a(name);
+     }
+     myName(myfunction) */
+
+    // callback function
+
+    /*  function greet(name , callback){
+         console.log("hello "+ name);
+         callback();
+         
+ 
+     }
+     function sayGoodbye(){
+         console.log(" How are you");
+         
+     }
+     greet("misbah" , sayGoodbye) */
+
+
+    // asynchronous task
+    /* function fetchdata(callback){
+        setTimeout(()=>{
+            console.log("data fetched");
+            callback();
+            
+        }, 3000);
+    }
+    function processdata(){
+        console.log("Data processing....");
+        
+    }
+fetchdata(processdata); */
+    // Callback with Parameters
+    /*  function calculate(a,b,operation){
+       let result = operation(a,b);
+       console.log(result);
+       
+     }
+     function add(x,y){
+      return x+y;
+       
+     }
+     function multiply(x,y){
+       return x*y;
+       
+     }
+     calculate( 3,6, add)
+     calculate( 4,6, multiply) */
+
+    /*  function filternumber(number, condition){
+       return number.filter(condition)
+     }
+   function even(num){
+       return num%2===0;
+   }
+   function odd(num){
+       return num%2 !==0;
+   }
+   let array =[2,3,4,5,6,7,8,9,44,33];
+   console.log(filternumber(array , even));
+   console.log(filternumber(array, odd));
+    */
+
+    /* function greet(name, callback) {
+        console.log("Hello:" + name);
+        callback();
+
+    }
+    function sayGoodbye() {
+        console.log("How are you");
+
+    }
+
+    greet("misbah", sayGoodbye)
+ */
+    /* function calculation(a, b, op) {
+        op(a, b)
+    }
+    function sum(a, b) {
+        console.log(a + b);
+
+    }
+    function multiply(a, b) {
+        console.log(a * b);
+
+    }
+    calculation(2, 4, sum)
+    calculation(2, 4, multiply)
+
+ */
+
+function greet(){
+    console.log("Hello " + name);
+    
+}
+setTimeout(greet,3000)
+</script>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    /* async function piza_order(){
+        console.log('piza order kar raha hon');
+
+        const piza = await new Promise((resolve)=>{
+            setTimeout(()=>{
+                resolve("piza ready hora hai");
+                
+            },3000)
+        });
+        
+        console.log(piza);
+           console.log("ab ka lo");
+           
+      
+        
+        
+    }
+    piza_order() */
+  /*   // Ye async function hai jo pizza order karta hai
+async function orderPizza() {
+    console.log("Pizza order kar raha hoon...");
+    
+    // Ye promise hai jo 2 second baad pizza ready karta hai (simulation ke liye)
+    const pizza = await new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Pizza tayyar hai!");
+        }, 2000); // 2 second ka wait
+    });
+    
+    console.log(pizza); // Jab pizza ready ho, tab ye print hoga
+    console.log("Ab kha lo!");
+} */
+
+// Function ko call karo
+// orderPizza();
+
+/* async function checkWheather(){
+    console.log("musam check kar raha ho");
+    const wheather = await new Promise((resolve)=>{
+        setTimeout(()=>{
+            resolve("aj barish hogi")
+        },3000)
+    
+        
+    });
+    console.log(wheather);
+    
+}
+checkWheather() */
+ /* try {
+    let a = "hello"
+    console.log(a);
+    
+ } catch(error){
+    console.log(error.message);
+    
+ }
+//  fix error throw catch
+try {
+    let age = 15/"misdf";
+    console.log(age);
+    
+    
+} catch (error){
+    console.log("you did something wrong",error.message);
+}
+     */
+
+try {
+  let result = 10 / "apple"; // Dividing by a string is not valid
+  console.log("Result:", result);
+} catch (error) {
+  console.log("Oops, something went wrong:", error.message);
+}
+
+try {
+  console.log("Trying to do something...");
+  throw new Error("Oops, I made a mistake!"); // Manually throw an error
+} catch (error) {
+  console.log("Caught an error:", error.message);
+} finally {
+  console.log("This will always run, no matter what.");
+}
+</script>
+</html>

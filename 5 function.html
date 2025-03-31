@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>functon</title>
+</head>
+<body>
+    <h2>Functon in Js</h2>
+</body>
+<script>
+   /*  function Greet(name){
+        console.log(name + "Good Mornng");
+        
+    }
+  greet("Misbah"); */
+
+  /* function randomnumber(min, max){
+    let Randomvalue = max - min+1;
+    let RandomGenerator = Math.random();
+    let value = Randomvalue*RandomGenerator;
+    console.log(value);
+    
+
+  }
+  randomnumber(2,5) */
+
+
+  // find largest number
+  /* function Mynum(num1,num2,num3){
+    if(num1>num2){
+      console.log(num1);
+      
+    }
+    else if(num2>num3){
+      console.log(num2);
+   
+    }
+    else{
+      console.log(num3);
+      
+    }
+     
+  }
+  Mynum(18,20,16) */
+
+  // check number is even or odd
+
+  /* findNumber = (num)=>{
+    if(num%2===0){
+      console.log("Even number");
+      
+    }
+    else{
+      console.log("odd Number");
+      
+    }
+  }
+    findNumber(6)
+  */
+    
+
+    // Revesre a string
+   /*  ReverseString =(str)=>{
+      let Revesre = "";
+      for(let i=str.length-1; i>=0; i--){
+        Revesre += str[i];
+        return Revesre;
+        
+      }
+    }
+   console.log(ReverseString("Misbahuddin")); */
+ 
+  /*  function Greet(name){
+    console.log(`hello ${name} and wellcome`);
+    
+   }
+   greet("Misbah"); */
+
+  //  A function that can be called before it's defined.
+
+
+
+   /* let yourName= prompt("Please Enter your name");
+   function greet(name){
+    console.log(`Hello and welcome ${yourName}`);
+    
+   }
+
+   greet(); */
+
+
+
+
+  //  functon can be stored in a variables
+
+  /* let sumNumbers = function (a,b){
+    return a+b;
+
+  }
+console.log(sumNumbers(3,5)); */
+
+
+
+
+
+
+// callback function
+
+/* setTime=(callback)=>{
+console.log("Message will appear after 3 seconds");
+setTimeout(callback , 3000);
+}
+afterTime = ()=>{
+  console.log("time is completed");
+  
+}
+setTime(afterTime);
+ */
+
+//  Write a function called greetUser that takes a name and a callback. 
+// The main function should print a greeting, and the callback should print "Have a great day!"
+
+/* function greetUser(name, callback){
+  console.log("hello, "+ name + "!");
+  callback();
+}
+ function passingMsg(){
+  console.log("have a great day");
+  
+};
+greetUser("misbah", passingMsg);
+
+
+
+
+function addNumbers(a,b, callback){
+ let sum = a+b;
+  callback(sum);
+  
+}
+
+function printResult(result){
+  console.log("the result is ",result);
+  
+}
+addNumbers(5,8, printResult);
+
+
+function delayMsg(callback){
+  console.log( "msg is preparing");
+ setTimeout(()=>{callback();}, 3000);
+}
+function displayMsg(){
+  console.log(" wellcome misbah to Our company");
+  
+}
+delayMsg( displayMsg); */
+
+function calculateArea(num1,num2){
+  if(num1,num2){
+    return num1*num2;
+  }
+  else{
+   return num1*num1;
+  }
+}
+calulate = calculateArea(7)
+console.log(calulate);
+
+let numbers = [1,2,3,4,5]
+function doubleArray(num1, callback){
+  
+}
+
+</script>

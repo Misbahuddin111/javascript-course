@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do app</title>
+<style>
+  body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    #task-input {
+      padding: 10px;
+      width: 300px;
+      margin-right: 10px;
+    }
+    #add-task-btn {
+      padding: 10px 20px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    #task-list {
+      list-style-type: none;
+      padding: 0;
+    }
+    .task-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      border: 1px solid #ccc;
+      margin-bottom: 5px;
+      background-color: #f9f9f9;
+    }
+    .task-item.completed {
+      text-decoration: line-through;
+      opacity: 0.6;
+    }
+    .delete-btn {
+      background-color: #dc3545;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+  </style> 
+
+ <!--  <style>
+
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 20px;
+    }
+
+    #task-input {
+      padding: 10px;
+      width: 300px;
+      margin-right: 10px;
+    }
+
+    #add-task-btn {
+      padding: 10px 20px;
+      background-color: green;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    #task-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .task-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      border: 1px solid #ccc;
+      margin-bottom: 5px;
+      border-color: #f9f9f9;
+      cursor: pointer;
+      background-color: darkgray;
+    }
+
+    .task-item .completed {
+      text-decoration: line-through;
+      opacity: 0.6;
+    }
+
+    .delete-btn {
+      padding: 5px 10px;
+      color: white;
+      background-color: black;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style> -->
+</head>
+
+<body>
+  <h1>To-Do app</h1>
+  <input type="text" id="task-input" placeholder="Enter your task">
+  <button id="add-task-btn">Add Task</button>
+  <ul id="task-list"></ul>
+</body>
+
+<script>
+
+  // step 1 Get Dom elements
+  let taskInput = document.getElementById("task-input");
+  let addTaskBtn = document.getElementById("add-task-btn");
+  let taskList = document.getElementById("task-list");
+
+  // Step 2: Add task when the "Add Task" button is clicked
+  addTaskBtn.addEventListener("click", function () {
+    // Step 3: Get the task text from the input field
+    const taskText = taskInput.value.trim();
+
+    // Step 4: Check if the input is empty
+    if (taskText === '') {
+      alert("Please Enter a task");
+      return;
+    }
+    // Step 5: Create a new task item
+
+    const taskItem = document.createElement("Li");
+    taskItem.className = "task-item";
+
+    // Step 6: Add the task text
+    const taskTextSpan = document.createElement("span");
+    taskTextSpan.textContent = taskText;
+    taskItem.appendChild(taskTextSpan);
+    // Step 7: Add a delete button
+    const deleteBtn = document.createElement("button");
+    deleteBtn.className = "delete-btn";
+    deleteBtn.textContent = "Delete";
+
+    deleteBtn.onclick = function () {
+      taskList.removeChild(taskItem);
+    }
+    taskItem.appendChild(deleteBtn);
+
+    // Step 8: Mark task as completed when clicked
+    taskItem.onclick = function (){
+      if(taskItem.classList.contains("completed")){
+        taskItem.classList.removeChild("completed");
+      }
+      else{
+        taskItem.classList.add("completed")
+      }
+    };
+    taskList.appendChild(taskItem);
+    // clear the input
+    taskInput.value ="";
+  });
+  
+
+</script>
+
+</html>

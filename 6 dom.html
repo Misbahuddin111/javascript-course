@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+
+
+<body>
+
+    <div id="mydiv">
+        <ul>
+            <li>msbskf</li>
+            <li>skfhasd</li>
+            <li>askfhalshf</li>
+        </ul>
+    </div>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. ?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. ?</p>
+
+
+    </div> <div class="container">
+
+        <div class="mylink"><a href="">Google</a></div>
+</body>
+<script>
+    /* let styling = document.getElementById("myid");
+    styling.innerText="misbah uddin"; */
+
+
+    /* let para = document.getElementsByTagName('p');
+        for(let i =0; i<para.length; i++){
+            para[i].style.color="red";
+            alert(`color will change ${i}`)
+        } */
+
+    // creating element in js
+
+
+
+    /* let newTag = document.getElementsByTagName('p');
+    for( let i=0; i<newTag.length; i++){
+        newTag[i].style.color="orange";
+        alert(`color will change to orange ${i}`);
+    } */
+
+   /*  let newpara= document.createElement('p');
+     let newButton = document.createElement('button');
+     newButton.innerText="submit"
+     newpara.innerText='hello my name is misbah khan from peshawar and my fav sub is cs';
+     let Mycontainer = document.querySelector('.container');
+     Mycontainer.append(newpara , newButton);  */
+
+    // set Attributes
+
+
+
+   /*  let myLink = document.querySelector('.mylink');
+    myLink.setAttribute("href", ("www.goggle.com")); */
+
+    // remove elements
+    
+
+ /* let mycon = document.querySelector('.container button');
+mycon.remove(); */
+function bluecolor(){
+   let paras = document.querySelectorAll('p')
+  paras.forEach(para =>{
+    para.style.color = 'blue';
+  })
+    
+
+}
+bluecolor();
+/*
+let mydiv = document.getElementById("mydiv")
+mydiv.style.backgroundColor="red"; */
+
+let newdiv = document.createElement("div")
+newdiv.textContent = "hello world"
+document.body.append(newdiv)
+   
+
+</script>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter project</title>
+</head>
+<body>
+    <h1 id="counter">0</h1>
+    <button type="submit" id="decreament">Decreamrnt</button>
+    <button type="submit" id="increament">Increament</button>
+    <button type="submit" id="reset">Reset</button>
+</body>
+<script>
+    let counter = document.getElementById("counter");
+    let decreament = document.getElementById("decreament");
+    let increament = document.getElementById("increament");
+    let reset = document.getElementById("reset");
+    let count = 0;
+    function myCounter(){
+        counter.textContent = count;
+    }
+    decreament.addEventListener("click", function(){
+        count--;
+        myCounter();
+    })
+    increament.addEventListener("click", function(){
+        count++;
+        myCounter();
+    })
+    reset.addEventListener("click", function(){
+        count=0;
+        myCounter();
+    })
+
+</script>
+</html>

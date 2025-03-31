@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise</title>
+</head>
+
+<body>
+    <button id="resolve-btn">resolve</button>
+    <button id="reject-btn">Reject</button>
+</body>
+<script>
+    // basic syntax
+    /* let myPrmises = new Promise((resolve , reject)=>{
+       setTimeout(()=>{
+          resolve('solve after 3 seconds')
+
+       },3000)
+    })
+myPrmises.then((res)=>{
+   console.log(res);
+   
+})
+
+// another example Example 2: Success aur Failure
+const checkNumber = new Promise((resolve , reject)=>{
+    let num = 20
+    if (num>10){
+        resolve("number is grater then 10")
+    }
+    else{
+        reject("number is less then 10")
+    }
+})
+checkNumber.then(function (data){
+    console.log(data);
+    
+})
+checkNumber.catch(function (err){
+    console.log(err);
+    
+}) */
+
+// Example 3: Real-World (Fake API Call)
+
+/* const fakeApi = new Promise((resolve,reject)=>{
+    
+    setTimeout( ()=>{
+        let data = {
+        name:"misbah",
+        roll_no: 448,
+        age: 21
+    };
+        if(data){
+            resolve(data)
+        }
+        else{
+            reject("data nahi mila")
+        }
+
+    },3000)
+})
+fakeApi.then((res)=>{
+    console.log(res);
+    
+})
+fakeApi.catch((err)=>{
+    console.log(err);
+    
+}) */
+
+    /* let resolvetBtn = document.getElementById("resolve-btn")
+    let rejectBtn = document.getElementById("reject-btn")
+
+    const p = new Promise((resolve, reject) => {
+        resolvetBtn.addEventListener("click", () => {
+            resolve("resolved")
+        })
+
+        rejectBtn.addEventListener("click", () => {
+            reject("object is rejected")
+        })
+    })
+    p.then((data) => {
+        //    console.log("successfully resolved")
+        console.log(data);
+
+    })
+
+    p.catch((error) => {
+        console.log(error);
+
+    })
+
+ */
+    /* const mypromise = new Promise((resolve, reject) => {
+        let success = true;
+        if (success) {
+            resolve("operation successfully")
+        }
+        else {
+            reject("operation failed")
+        }
+    })
+    /* mypromise.then((res)=>{
+        console.log(res);
+        
+    }) 
+ mypromise.catch((error)=>{
+    console.log(error);
+    
+ })
+
+ */
+ /*  const firstpromise = new promise((resolve,reject)=>{
+    resolve("first promise complete")
+  })
+  const secondpromise = new promise((resolve,reject)=>{
+    resolve("second promise complete")
+  }) */
+
+ /* const myp = new Promise((resolve,reject)=>{
+    let a = 1+1;
+    if(a==2){
+        resolve("number is correct")
+    }
+    else{
+        reject("not correct")
+    }
+     })
+     myp.then((message)=>{
+        console.log(message);
+        
+     })
+     myp.catch((error)=>{
+        console.log(error);
+        
+     }) */
+    //  PROMISES METHODS()
+    let promise1= new Promise((resolve)=> setTimeout(()=>{resolve("resolved 1")},1000))
+    let promise2 = new Promise((resolve)=>setTimeout(()=>{resolve("resolves 2")},2000))
+    let promise3 = new Promise((resolve)=>setTimeout(()=>{resolve("resolves 3")},3000))
+    Promise.all([promise1,promise2, promise3])
+    .then((res)=>{
+        console.log(res);
+        
+    })
+    .catch((err)=>{
+        console.log(err);
+        
+    })
+
+    /* let promise1 = new Promise((resolve) => setTimeout(() => resolve("Promise 1"), 1000));
+let promise2 = new Promise((resolve) => setTimeout(() => resolve("Promise 2"), 2000));
+let promise3 = new Promise((resolve) => setTimeout(() => resolve("Promise 3"), 3000));
+
+Promise.all([promise1, promise2, promise3])
+    .then((results) => {
+        console.log(results); // Output: ["Promise 1", "Promise 2", "Promise 3"]
+    })
+    .catch((error) => {
+        console.log("Error:", error);
+    }); */
+</script>
+</htm

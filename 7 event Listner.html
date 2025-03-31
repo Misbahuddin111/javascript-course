@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Event Listners</title>
+</head>
+<body>
+    <div id="container">
+    <h1>Events Listner in javaSript</h1> 
+    <button id="mybutton" type="button">click me</button><br>
+    <p id="message"></p>
+    <a href="www.google.com ">google</a>
+
+
+    <p id="para2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Pariatur ut nostrum veniam sapiente dignissimos amet cum, eligendi dolorum expedita assumenda?</p>
+        </div>
+        <input type="text" id="inputTag" placeholder="write a paragraph">
+        <p id="para"></p>
+        <br>
+        <button type="submit" id="toggleButton">off</button>
+        <br>
+        <p id="coords">Move your mouse to see the coordinates.</p>
+
+        <!-- preventDefault example -->
+         <a href=""https://www.google.com" id="mylink"> Click me</a>
+
+         <br>
+
+         <ul id="list">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+
+        <!-- . Prevent Form Submission if Input is Empty -->
+        <form id="myForm">
+            <input type="text" id="textInput" placeholder="Enter something">
+            <button type="submit">Submit</button>
+            <p id="errorMessage" style="color: red;"></p>
+        </form>
+        
+</body>
+<script>
+    // let button = document.getElementById('button');
+    /* let message = document.getElementById('button');
+    button.addEventListener("click" , function(){
+          alert("button  was clicked");    })*/
+ 
+    // event object in dom 
+   /*  button.addEventListener("click", function(event){
+        event.target.style.color="red";
+        alert("msg is displyed")
+    }) */
+
+
+  /*  button.addEventListener("mouseover", function(){
+    button.style.color='red';
+    button.addEventListener("mouseout", function(){
+        button.style.color="blue";
+    })
+   })
+ */
+/* let input = document.getElementById("inputTag");
+let para = document.getElementById("para");
+input.addEventListener("keyup", function(){
+    para.innerText = " you type " + input.valvue;
+}) */
+
+// basic questions
+
+// Create a button that shows an alert with the message "Button Clicked!" when clicked.
+
+/* let button = document.getElementById("mybutton");
+button.addEventListener("click", function(){
+    alert("button was clicked")
+});
+ */
+// Add a mouseover event to a paragraph that changes its text to "Hovered!" when the mouse is over it.
+ /* let para2 = document.querySelector("#para2");
+ para2.addEventListener("mouseover", function(){
+    alert("Hovered")
+ }) */
+
+//  Attach a dblclick event to a div that changes its background color to red when double-clicked.
+ /* let div = document.getElementById("container");
+ div.addEventListener("dblclick", function(){
+    div.style.background = "red";
+ }) */
+
+//  intermediate questions
+
+ /* let toggleButton = document.getElementById("toggleButton");
+ toggleButton.addEventListener("click", function(){
+    if(toggleButton.innerText ==="off"){
+        toggleButton.innerText= "on"
+        toggleButton.style.background="red";
+
+    }
+    else{
+        toggleButton.innerText = "off";
+        toggleButton.style.background="white";
+    }
+ }) */
+
+
+ 
+//  Toggle Button (Switch between "ON" and "OFF" on Click)
+
+   /*  document.addEventListener('mousemove', function(event) {
+        document.getElementById('coords').innerText = `X: ${event.clientX}, Y: ${event.clientY}`;
+    });
+ */
+
+
+//  Prevent Default Behavior of a Link and Log a Message
+
+/* let link = document.getElementById("mylink");
+link.addEventListener("click", function(event){
+    event.defaultPrevented();
+    alert("click was prevented");
+    
+}) */
+
+
+
+
+// Event Delegation: Detect Clicks on Any <li> inside a <ul>
+
+    /* document.getElementById('list').addEventListener('click', function(event) {
+        if (event.target.tagName === 'LI') {
+            console.log(`You clicked: ${event.target.innerText}`);
+        }
+    }); */
+
+
+//   advanced questions
+
+   /*  document.addEventListener('keydown', function(event) {
+        if (event.code === "Space") { 
+            const randomColor = `#${Math.floor(Math.random()*16777215).toString(16)}`;
+            document.body.style.backgroundColor = randomColor;
+        }
+    });
+ */
+
+
+//  . Prevent Form Submission if Input is Empty
+
+   /*  document.getElementById('myForm').addEventListener('submit', function(event) {
+        const input = document.getElementById('textInput');
+        const errorMessage = document.getElementById('errorMessage');
+
+        if (input.value.trim() === "") {
+            event.preventDefault();  // Stop form submission
+            errorMessage.innerText = "Input cannot be empty!";
+        } else {
+            errorMessage.innerText = "";  // Clear error if valid
+        }
+    }); */
+
+    
+    // scope in js
+  /*   Global scope: Accessible everywhere.
+Function scope: Accessible only inside a function (var, let, const).
+Block scope: Accessible only inside {} when using let or const (not var).
+Lexical scope: Inner functions can access outer variables. */
+
+
+</script>
+</html>
