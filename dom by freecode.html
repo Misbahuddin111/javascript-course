@@ -1,0 +1,269 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container" >
+    <h1>misbah</h1>
+    <p id="para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, rem dolor! Recusandae culpa quisquam labore similique ipsum non ut, natus accusamus. Laboriosam voluptatum natus corporis cupiditate a perferendis consequatur ratione.
+    Sequi commodi rem quas hic neque iste rerum corporis omnis natus, dolore, dolorem minima? Excepturi possimus quos est sed debitis consequatur. Obcaecati quidem officia aperiam temporibus impedit nihil repudiandae blanditiis?
+    Iusto, voluptatibus ad obcaecati autem voluptatum architecto, expedita culpa esse neque velit totam quae veritatis ex sit facere recusandae quam eos, numquam aperiam magni. Nesciunt modi sequi dolores. Officia, id.
+   
+  </div>
+  <div class="list"><p>
+    my name is misbah;
+  </p></div>
+
+ <a href="www.fb.com" id="link">facebok</a>;<br>
+
+ <button id="btn">click me</button><br>
+ <form id="myform">
+
+  <input type="text" name="username" placeholder="enter name">
+  <button type="submit">submit</button>
+
+  <div id="parentDiv"><br>
+
+
+    <div class="container">
+      <h1>Age Calculator</h1>
+      <div class="form">
+          <label for="birthday">Enter you date of birth</label>
+
+          <input type="date" id="birthday" name="birthday">
+          <button id="btn">Calculate Age</button>
+          <p id="result">Your age is </p>
+      </div>
+  </div>
+
+  </div>
+ </form>
+</body>
+<script>
+
+  // selecting elements in the dom...
+
+
+
+  /* let class1 = document.getElementsByClassName("container")
+  console.log(class1);
+  let idd = document.getElementById("para");
+  console.log(idd);
+  let tag = document.getElementsByTagName("h1");
+  console.log(tag);
+  let div1= document.getElementsByName("div");
+  console.log(div1);
+  
+ */
+//  styling elements through javascirpt.
+
+
+ /* let divv = document.getElementById("para");
+ divv.style.color="red";
+ divv.style.backgroundColor="aqua";
+  */
+
+
+  // creating elements.
+
+ /*  newElement = document.createElement("button");
+  newElement.innerText= "submit";
+  let para = document.querySelector(".container");
+  para.append(newElement);  
+ */
+  // modifying elements
+
+
+/* let newpara = document.querySelector(".list");
+newpara.innerHTML= '<p>my name s not misbah'</p>;
+newpara.textContent= 'khsahvas';
+newpara.innerText= 'my name s not misbah';
+ */
+
+
+//   set attributes
+/*   in the dom setAttribute() is a method that set the value of 
+a specified attribute on letan element
+
+syntax
+
+node.setAttribute("AttributeName", 'value')
+
+here nameAttribute is the attribute to set
+value: is the new value for that attribute; 
+ */
+
+// how to set links
+
+/* const link = document.querySelector("#link");
+link.setAttribute("href",('www.google.com'));
+ */
+// styling 
+
+ /* const newclass = document.querySelector('.container');
+ newclass.setAttribute("style", "background-color:red");
+   */
+
+  // remove an element
+
+ /*  let removePara = document.querySelector(".container h1");
+  removePara.remove()
+ */
+
+
+//  Event listener in Dom
+
+/*  an even listener in Dom is function that wait for specific event to 
+occur on an element or node and then executes a specified action in responce
+
+
+syntax
+
+    element.addEventListener('event', 'function');
+
+     here element is Dom of element to attach the event listener to
+
+     event. the type of event to listen for  i.e(click, hover, submit)
+     Function: the callback function to execute when the event occur
+
+
+ */
+  
+
+ /* let btn = document.getElementById('btn');
+ btn.addEventListener("click", function(){
+ console.log("button was clicked"); 
+ }); */
+
+
+
+ 
+  
+  
+ /* let btn = document.getElementById('btn');
+btn.addEventListener("mouseover", function(){
+  btn.style.backgroundColor="yellow";}); */
+
+ /*  let form = document.getElementById("myform");
+  form.addEventListener("keypress", function(event){
+    console.log("key pressed:"+ event.key);
+    
+  });
+ */
+
+  /* let form = document.querySelector(".container");
+  form.addEventListener("scroll", function(){
+    console.log("scrolled");
+    
+  }) */
+
+  
+
+
+
+    // Append ans appendChild 
+
+    /* Use append() when you want to add multiple nodes or text content in one call, 
+    do not need a return value, and are working in a modern browser environment.
+
+
+Use appendChild() when you need compatibility with older browsers, require a return value, 
+or want stricter type checking to ensure only nodes are being appended.
+     */
+   
+     /* let parentDiv = document.getElementById("parentDiv");
+
+let heading = document.createElement("h2");
+heading.innerText ="ths is main heading";
+
+let param = document.createElement("p");
+
+param.innerText="ths is a paragraph"
+
+let button = document.createElement("button");
+button.innerText ='click me';
+
+parentDiv.append(heading, param, button);
+console.log(parentDiv);
+ */
+
+
+/* const taskInput = document.getElementById('taskInput');
+const addTaskBtn = document.getElementById('addTaskBtn');
+const taskList = document.getElementById('taskList');
+
+addTaskBtn.addEventListener('click', function() {
+  const taskText = taskInput.value;
+  if (taskText.trim()) {
+    const li = document.createElement('li');
+    li.textContent = taskText;
+    
+    // Add a delete button to each task
+    const deleteBtn = document.createElement('button');
+    deleteBtn.textContent = 'Delete';
+    deleteBtn.addEventListener('click', function() {
+      taskList.removeChild(li);
+    });
+
+    li.appendChild(deleteBtn);
+    taskList.appendChild(li);
+    taskInput.value = '';
+  } });*/
+
+
+
+  
+
+
+
+
+
+
+ 
+
+
+
+
+
+  const btnEl = document.getElementById("btn");
+const birthdayEl = document.getElementById("birthday");
+const resultEl = document.getElementById("result");
+
+function calculateAge() {
+  const birthdayValue = birthdayEl.value;
+  if (birthdayValue === "") {
+    alert("Please enter your birthday");
+  } else {
+    const age = getAge(birthdayValue);
+    resultEl.innerText = `Your age is ${age} ${age > 1 ? "years" : "year"} old`;
+  }
+}
+
+function getAge(birthdayValue) {
+  const currentDate = new Date();
+  const birthdayDate = new Date(birthdayValue);
+  let age = currentDate.getFullYear() - birthdayDate.getFullYear();
+  const month = currentDate.getMonth() - birthdayDate.getMonth();
+
+  if (
+    month < 0 ||
+    (month === 0 && currentDate.getDate() < birthdayDate.getDate())
+  ) {
+    age--;
+  }
+
+  return age;
+}
+
+btnEl.addEventListener("click", calculateAge);
+
+
+
+  
+
+</script>
+</html>
